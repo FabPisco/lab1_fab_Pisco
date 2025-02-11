@@ -98,7 +98,7 @@ struct ContentView: View {
     func startTimer() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
-            wrongAnswers += 1 
+            wrongAnswers += 1  // Auto records a wrong answer
             nextNumber()
         }
     }
