@@ -24,7 +24,6 @@ struct ContentView: View {
             //style for the number
             Text("\(number)")
                 .font(.custom("Snell Roundhand", size: 50)) // the script font with size
-                .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green)// changed the text color to green
                 .padding()
@@ -35,7 +34,6 @@ struct ContentView: View {
             }
             // styles for the button test
                 .font(.custom("Snell Roundhand", size: 50))// the script font with size
-                .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green)// changed the text color to green
                 .padding()
@@ -46,7 +44,6 @@ struct ContentView: View {
             }
             //style for text of non prime number
                 .font(.custom("Snell Roundhand", size: 50)) // the script font with size
-                .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green) // changed the text color to green
                 .padding()
@@ -60,7 +57,6 @@ struct ContentView: View {
             // this part is showing me the correct or wrong count
             Text("Correct: \(correctAnswers) | Wrong: \(wrongAnswers)")
                 .font(.custom("Snell Roundhand", size: 35)) // the script font with size
-                .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green)// changed the text color to green
                 .padding()
