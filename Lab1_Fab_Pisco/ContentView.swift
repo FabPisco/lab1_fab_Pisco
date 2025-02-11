@@ -111,7 +111,7 @@ struct ContentView: View {
         return true // not divisible , it is a prime
     }
 }
-
+// for the SwiftUI preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
