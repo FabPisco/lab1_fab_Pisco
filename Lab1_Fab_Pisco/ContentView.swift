@@ -81,7 +81,7 @@ struct ContentView: View {
             wrongAnswers += 1
             result = "❌" //if wrong
         }
-        nextNumber()
+        nextNumber() // this part is generating the new number
     }
     
     // next random number, tracking attemps
