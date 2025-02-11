@@ -6,8 +6,10 @@
 //
 
 
-import SwiftUI
+import SwiftUI // this is for impoting the Framework
 
+
+// all the variables I keep for this project to track data
 struct ContentView: View {
     @State private var number: Int = Int.random(in: 1...100)
     @State private var correctAnswers = 0
@@ -19,6 +21,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            //style for the number
             Text("\(number)")
                 .font(.custom("Snell Roundhand", size: 50))
                 .font(.largeTitle)
@@ -26,29 +29,35 @@ struct ContentView: View {
                 .foregroundColor(.green)
                 .padding()
             
+            // The user selecting the prime number
             Button("Prime") {
                 checkAnswer(isPrime: true)
             }
+            // styles for the button test
                 .font(.custom("Snell Roundhand", size: 50))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green)
                 .padding()
             
+            // This also is for user to select non prime number
             Button("Not Prime") {
                 checkAnswer(isPrime: false)
             }
+            //style for text of non prime number
                 .font(.custom("Snell Roundhand", size: 50))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green)
                 .padding()
             
+            //to display the results of check or error
             if let result = result {
                 Text(result)
                     .font(.title)
             }
             
+            // this part is showing me the correct or wrong count
             Text("Correct: \(correctAnswers) | Wrong: \(wrongAnswers)")
                 .font(.custom("Snell Roundhand", size: 35))
                 .font(.largeTitle)
@@ -57,15 +66,17 @@ struct ContentView: View {
                 .padding()
         }
         .onAppear {
-            startTimer()
+            startTimer() //starts the time
         }
         .alert(isPresented: $showAlert) {
+            
+        //showing me final score of 10 times
             Alert(title: Text("Results"),
                   message: Text("Correct: \(correctAnswers)\nWrong: \(wrongAnswers)"),
                   dismissButton: .default(Text("OK")))
         }
     }
-    
+    // The functions to see if the user answers are right or wrong
     func checkAnswer(isPrime: Bool) {
         if isPrime == isPrimeNumber(number) {
             correctAnswers += 1
@@ -77,15 +88,17 @@ struct ContentView: View {
         nextNumber()
     }
     
+    // next random number, tracking attemps
     func nextNumber() {
         attempts += 1
         if attempts % 10 == 0 {
-            showAlert = true
+            showAlert = true // showing every 1o times
         }
         number = Int.random(in: 1...100)
         startTimer()
     }
     
+    // starting at 5 second timer
     func startTimer() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
@@ -93,7 +106,7 @@ struct ContentView: View {
             nextNumber()
         }
     }
-    
+    // checking if my number is prime
     func isPrimeNumber(_ n: Int) -> Bool {
         if n < 2 { return false }
         for i in 2..<n {
