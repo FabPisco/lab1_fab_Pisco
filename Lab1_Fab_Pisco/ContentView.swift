@@ -112,7 +112,7 @@ struct ContentView: View {
         for i in 2..<n {
             if n % i == 0 { return false }
         }
-        return true
+        return true // not divisible , it is a prime 
     }
 }
 
