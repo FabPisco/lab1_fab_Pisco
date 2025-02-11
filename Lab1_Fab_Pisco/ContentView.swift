@@ -51,7 +51,7 @@ struct ContentView: View {
                 .foregroundColor(.green) // changed the text color to green
                 .padding()
             
-            //to display the results of check or error
+            //to display the results of check right or error
             if let result = result {
                 Text(result)
                     .font(.title)
