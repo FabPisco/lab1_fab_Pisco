@@ -90,7 +90,7 @@ struct ContentView: View {
         if attempts % 10 == 0 {
             showAlert = true // showing every 1o times
         }
-        number = Int.random(in: 1...100)
+        number = Int.random(in: 1...100) // random number
         startTimer() // timer restarts for next number
     }
     
