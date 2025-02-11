@@ -26,7 +26,7 @@ struct ContentView: View {
                 .font(.custom("Snell Roundhand", size: 50)) // the script font with size
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(.green)
+                .foregroundColor(.green)// changed the text color to green
                 .padding()
             
             // The user selecting the prime number
@@ -37,7 +37,7 @@ struct ContentView: View {
                 .font(.custom("Snell Roundhand", size: 50))// the script font with size
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(.green)
+                .foregroundColor(.green)// changed the text color to green
                 .padding()
             
             // This also is for user to select non prime number
@@ -48,7 +48,7 @@ struct ContentView: View {
                 .font(.custom("Snell Roundhand", size: 50)) // the script font with size
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(.green)
+                .foregroundColor(.green) // changed the text color to green
                 .padding()
             
             //to display the results of check or error
@@ -62,7 +62,7 @@ struct ContentView: View {
                 .font(.custom("Snell Roundhand", size: 35)) // the script font with size
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(.green)
+                .foregroundColor(.green)// changed the text color to green
                 .padding()
         }
         .onAppear {
