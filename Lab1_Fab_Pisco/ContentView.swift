@@ -106,7 +106,7 @@ struct ContentView: View {
     func isPrimeNumber(_ n: Int) -> Bool {
         if n < 2 { return false }
         for i in 2..<n {
-            if n % i == 0 { return false }
+            if n % i == 0 { return false } // not a prime if divisible by any number
         }
         return true // not divisible , it is a prime
     }
