@@ -96,7 +96,7 @@ struct ContentView: View {
     
     // starting at 5 second timer
     func startTimer() {
-        timer?.invalidate()
+        timer?.invalidate() // stops existing timer
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
             wrongAnswers += 1  // Auto records a wrong answer
             nextNumber()
