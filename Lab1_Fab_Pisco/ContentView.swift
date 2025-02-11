@@ -91,7 +91,7 @@ struct ContentView: View {
             showAlert = true // showing every 1o times
         }
         number = Int.random(in: 1...100)
-        startTimer()
+        startTimer() // timer restarts for next number
     }
     
     // starting at 5 second timer
