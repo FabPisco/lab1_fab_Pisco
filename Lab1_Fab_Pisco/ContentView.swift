@@ -21,17 +21,25 @@ struct ContentView: View {
         VStack {
             Text("\(number)")
                 .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.green)
                 .padding()
             
             Button("Prime") {
                 checkAnswer(isPrime: true)
             }
-            .padding()
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.green)
+                .padding()
             
             Button("Not Prime") {
                 checkAnswer(isPrime: false)
             }
-            .padding()
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.green)
+                .padding()
             
             if let result = result {
                 Text(result)
@@ -39,6 +47,9 @@ struct ContentView: View {
             }
             
             Text("Correct: \(correctAnswers) | Wrong: \(wrongAnswers)")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.green)
                 .padding()
         }
         .onAppear {
