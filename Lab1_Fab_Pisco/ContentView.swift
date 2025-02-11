@@ -20,6 +20,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("\(number)")
+                .font(.custom("Snell Roundhand", size: 50))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green)
@@ -28,6 +29,7 @@ struct ContentView: View {
             Button("Prime") {
                 checkAnswer(isPrime: true)
             }
+                .font(.custom("Snell Roundhand", size: 50))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green)
@@ -36,6 +38,7 @@ struct ContentView: View {
             Button("Not Prime") {
                 checkAnswer(isPrime: false)
             }
+                .font(.custom("Snell Roundhand", size: 50))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green)
@@ -47,6 +50,7 @@ struct ContentView: View {
             }
             
             Text("Correct: \(correctAnswers) | Wrong: \(wrongAnswers)")
+                .font(.custom("Snell Roundhand", size: 35))
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.green)
