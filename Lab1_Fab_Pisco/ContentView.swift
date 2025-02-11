@@ -19,7 +19,7 @@ struct ContentView: View {
     @State private var result: String? = nil
     @State private var timer: Timer? = nil
     
-    var body: some View {
+    var body: some View{
         VStack {
             //style for the number
             Text("\(number)")
@@ -80,10 +80,10 @@ struct ContentView: View {
     func checkAnswer(isPrime: Bool) {
         if isPrime == isPrimeNumber(number) {
             correctAnswers += 1
-            result = "✅"
+            result = "✅" // if right
         } else {
             wrongAnswers += 1
-            result = "❌"
+            result = "❌" //if wrong
         }
         nextNumber()
     }
@@ -112,7 +112,7 @@ struct ContentView: View {
         for i in 2..<n {
             if n % i == 0 { return false }
         }
-        return true // not divisible , it is a prime 
+        return true // not divisible , it is a prime
     }
 }
 
