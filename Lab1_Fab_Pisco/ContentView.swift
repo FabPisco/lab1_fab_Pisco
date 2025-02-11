@@ -98,13 +98,13 @@ struct ContentView: View {
     func startTimer() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
-            wrongAnswers += 1
+            wrongAnswers += 1 
             nextNumber()
         }
     }
     // checking if my number is prime
     func isPrimeNumber(_ n: Int) -> Bool {
-        if n < 2 { return false }
+        if n < 2 { return false } // tells it if numbers are < 2 than not prime
         for i in 2..<n {
             if n % i == 0 { return false } // not a prime if divisible by any number
         }
