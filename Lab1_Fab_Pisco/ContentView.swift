@@ -3,7 +3,7 @@
 //  Lab1_Fab_Pisco
 //
 //  Created by Fabricio Pisco on 2025-02-11.
-//
+// https://github.com/FabPisco/lab1_fab_Pisco
 
 
 import SwiftUI // this is for impoting the Framework
